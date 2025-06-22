@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 15% 4%;
+    --foreground: 240 5% 96%;
+    --card: 240 15% 6%;
+    --card-foreground: 240 5% 96%;
+    --popover: 240 15% 6%;
+    --popover-foreground: 240 5% 96%;
+    --primary: 263 70% 60%;
+    --primary-foreground: 240 5% 96%;
+    --secondary: 240 15% 8%;
+    --secondary-foreground: 240 5% 96%;
+    --muted: 240 15% 12%;
+    --muted-foreground: 240 5% 75%;
+    --accent: 240 15% 12%;
+    --accent-foreground: 240 5% 96%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 240 5% 96%;
+    --border: 240 15% 15%;
+    --input: 240 15% 15%;
+    --ring: 263 70% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-aztec-gradient text-foreground min-h-screen;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-black/60 border border-white/20;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.aztec-text-gradient {
+  background: linear-gradient(135deg, #d9ceff 0%, #bea6ff 50%, #9f75ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.high-contrast-text {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.medium-contrast-text {
+  color: #e2e8f0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.low-contrast-text {
+  color: #cbd5e1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
